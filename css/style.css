@@ -4,8 +4,11 @@ margin: 0;
 padding: 0;
 }
 
+
+
 #map {
-	width: 500px;
-    height: 400px;
+	margin: 1%;
+	width: 50%;
+    height: 60%;
     background-color: #CCC;
 }
