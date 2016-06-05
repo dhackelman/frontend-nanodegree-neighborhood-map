@@ -6,3 +6,11 @@ function initMap() {
       zoom: 12
     });
   }
+
+function AppViewModel() {
+    this.schoolName = "PWCS";
+    this.cmoName = "FirstlineSchools";
+}
+
+// Activates knockout.js
+ko.applyBindings(new AppViewModel());
