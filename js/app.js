@@ -9,7 +9,7 @@ function initMap() {
 
 function AppViewModel() {
     this.schoolName = "PWCS";
-    this.cmoName = "FirstlineSchools";
+    this.cmoName = "Firstline Schools";
 }
 
 // Activates knockout.js
