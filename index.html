@@ -7,12 +7,20 @@
 	<title>FEND: Neighborhood Map</title>
 </head>
 <body>
-<h3>New Orleans Charter Schools</h3>
+<h3>Durham Area Breweries</h3>
 	<div id="map"></div>
-	<div id="list">
-		<p>School Name: <strong data-bind="text:schoolName">todo</strong></p>
-		<p>CMO Name: <strong data-bind="text: cmoName">todo</strong></p>
-	</div>
+	<table class="table">
+    <thead><tr>
+        <th>BrewName</th><th>BrewPlace</th><th>Bike&Brew</th><th></th>
+    </tr></thead>
+    <!-- Todo: Generate table body -->
+    <tbody data-bind="foreach: brews">
+	    <tr scope="row">
+	        <td data-bind="text: name"></td>
+	        <td data-bind="text: location"></td>
+	    </tr>    
+    </tbody>
+</table>
 </body>
 <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-debug.js'></script>
 <script src="js/app.js"></script>
