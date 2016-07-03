@@ -25,3 +25,16 @@ var brews = ko.observableArray ([
 
 // Activates knockout.js
 ko.applyBindings(new durhamBrewViewModel());
+
+// Enabling btn to get user-location
+
+
+function initialize(location) {
+    console.log(location);
+};
+
+$(document).ready(function()
+{
+	navigator.geolocation.getCurrentPosition(initialize);
+
+});
