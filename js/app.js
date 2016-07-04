@@ -1,3 +1,5 @@
+//Create map + map Marker + Info Window
+//To do: separate marker creation from data/location
 $(document).ready(function () {
 
     function initMap() {
