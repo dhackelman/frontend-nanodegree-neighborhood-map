@@ -25,37 +25,37 @@ var brews = ko.observableArray ([
 		{
             name: "FullSteam Brewery", 
             location: "726 Rigsbee Ave, Durham, NC 27701", 
-            lat: 
-            lng: 
-            id: 
-         }, 
+            lat: 36.003109,
+            lng: -78.899600,
+            id:  "ChIJ7TZsl3bkrIkRzM2-MA5nQ6c"
+        }, 
 		{
             name: "Bull City Burger and Brewery",
             location: "107 E Parrish St, Durham, NC 27701", 
-            lat: , 
-            lng: ,
-            id: 
+            lat: 35.995494, 
+            lng: -78.899776,
+            id: "ChIJdzWmGm7krIkR4kcF1B58z9g"
         }, 
 		{
             name: "Ponysaurus Brewing Company", 
             location: "219 Hood St, Durham, NC 27701", 
-            lat: ,
-            lng: , 
-            id: 
+            lat: 35.989615,
+            lng: -78.895294, 
+            id: "ChIJh4DppWjkrIkRQGoYV47eKN8"
         }, 
 		{
             name: "Growler Grlz", 
             location: "4810 Hope Valley Rd #110, Durham, NC 27707", 
-            lat: ,
-            lng: ,
-            id: 
+            lat: 35.921706,
+            lng: -78.958476,
+            id: "ChIJE3JkbZzorIkRjQyJn2GzyV4"
         }, 
 		{
             name: "Triangle Brewing Co.", 
             location: "918 Pearl St, Durham, NC 27701", 
-            lat: ,
-            lng: ,
-            id: 
+            lat: 35.996770,
+            lng: -78.889100,
+            id: "ChIJGYUpXnvkrIkR0_P8yTHKoZk"
          }
 	])
 
