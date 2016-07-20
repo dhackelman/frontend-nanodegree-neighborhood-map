@@ -18,12 +18,45 @@ function googleError() {
     document.getElementById('map').innerHTML = "<h2>Google Maps is not loading. Please try refreshing the page later.</h2>";
 }
 
+//Add location with lat, lng, and id 
+//thanks to https://developers.google.com/places/place-id
+
 var brews = ko.observableArray ([
-		{name: "FullSteam Brewery", location: "726 Rigsbee Ave, Durham, NC 27701"}, 
-		{name: "Bull City Burger and Brewery" , location: "107 E Parrish St, Durham, NC 27701"}, 
-		{name: "Ponysaurus Brewing Company" , location: "219 Hood St, Durham, NC 27701"}, 
-		{name: "Growler Grlz", location: "4810 Hope Valley Rd #110, Durham, NC 27707"}, 
-		{name: "Triangle Brewing Co.", location: "918 Pearl St, Durham, NC 27701" }
+		{
+            name: "FullSteam Brewery", 
+            location: "726 Rigsbee Ave, Durham, NC 27701", 
+            lat: 
+            lng: 
+            id: 
+         }, 
+		{
+            name: "Bull City Burger and Brewery",
+            location: "107 E Parrish St, Durham, NC 27701", 
+            lat: , 
+            lng: ,
+            id: 
+        }, 
+		{
+            name: "Ponysaurus Brewing Company", 
+            location: "219 Hood St, Durham, NC 27701", 
+            lat: ,
+            lng: , 
+            id: 
+        }, 
+		{
+            name: "Growler Grlz", 
+            location: "4810 Hope Valley Rd #110, Durham, NC 27707", 
+            lat: ,
+            lng: ,
+            id: 
+        }, 
+		{
+            name: "Triangle Brewing Co.", 
+            location: "918 Pearl St, Durham, NC 27701", 
+            lat: ,
+            lng: ,
+            id: 
+         }
 	])
 
 function durhamBrewViewModel() {
