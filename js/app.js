@@ -93,9 +93,9 @@ function durhamBrewViewModel() {
 
     //create the info window object
     //Thanks: https://developers.google.com/maps/documentation/javascript/infowindows
-    var infowindow = new google.maps.InfoWindow({
+    var infoWindow = new google.maps.InfoWindow({
         maxWidth: 200,
-    });
+    }), marker, i;
 
     var marker;
 
@@ -107,18 +107,18 @@ function durhamBrewViewModel() {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(placeItem.lat(), placeItem.lng()),
             map: map,
-            animation: google.maps.Animation.DROP
+            animation: google.maps.Animation.DROP, 
         });
         placeItem.marker = marker;
 
         //Add event listeners for markers
 
-        google.maps.event.addListener(placeItem.marker, 'click', function(){
-            setTimeout(function(){
-                infowindow.setContent('<h3>' + placeItem.name + '</h3>');
-                infowindow.open(map, placeItem.marker);
-            }, 200);
-        });
+        google.maps.event.addListener(marker, 'click', (function() {
+            return function() {
+                infoWindow.setContent(placeItem.name());
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
     });
 
     
