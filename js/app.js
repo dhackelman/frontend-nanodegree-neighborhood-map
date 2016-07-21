@@ -4,8 +4,8 @@ var map;
 function initMap() {
     "use strict";
     map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: 35.9938889, lng: -78.8988889},
-        zoom: 14,
+        center: {lat: 35.980912, lng: -78.902903},
+        zoom: 12,
         disableDefaultUI: true
     });
     // Start the ViewModel here so it doesn't initialize before Google Maps loads
@@ -110,7 +110,18 @@ function durhamBrewViewModel() {
             animation: google.maps.Animation.DROP
         });
         placeItem.marker = marker;
+
+        //Add event listeners for markers
+
+        google.maps.event.addListener(placeItem.marker, 'click', function(){
+            setTimeout(function(){
+                infowindow.setContent('<h3>' + placeItem.name + '</h3>');
+                infowindow.open(map, placeItem.marker);
+            }, 200);
+        });
     });
+
+    
 
 
 }

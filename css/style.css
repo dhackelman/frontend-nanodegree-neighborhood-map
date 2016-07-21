@@ -7,8 +7,9 @@ padding: 0;
 
 
 #map {
-	margin: 1%;
-	width: 50%;
+	margin: auto;
     height: 60%;
     background-color: #CCC;
+    float: center;
 }
+
