@@ -89,6 +89,30 @@ function durhamBrewViewModel() {
     brews.forEach(function(placeItem) {
         self.placeList.push(new Place(placeItem));
     });
+
+
+    //create the info window object
+    //Thanks: https://developers.google.com/maps/documentation/javascript/infowindows
+    var infowindow = new google.maps.InfoWindow({
+        maxWidth: 200,
+    });
+
+    var marker;
+
+    // For each place, put a  marker and set event listeners for the infowindow
+    // Thanks: https://github.com/lacyjpr/neighborhood/blob/master/src/js/app.js
+    self.placeList().forEach(function (placeItem) {
+
+        // Define markers for each place
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(placeItem.lat(), placeItem.lng()),
+            map: map,
+            animation: google.maps.Animation.DROP
+        });
+        placeItem.marker = marker;
+    });
+
+
 }
 
 
